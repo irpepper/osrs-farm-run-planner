@@ -9,7 +9,7 @@ farm run for your account, and draws it on the game map.
 
 Routes are solved on a real travel graph rather than a hand-written list of "best teleports".
 
-- **88 nodes, 200+ edges** — every patch, teleport landing, spirit tree, fairy ring,
+- **103 nodes, 320+ edges** — every patch, teleport landing, spirit tree, fairy ring,
   mushtree and quetzal stop, with real world coordinates.
 - **Walking times are pathfound, not estimated.** Every walk edge is a breadth-first
   search over the game's collision map, so routes go around Falador's wall and through
