@@ -1,7 +1,7 @@
 # OSRS Farm Run Planner
 
-A single-page tool that works out the fastest herb, tree, fruit tree and hardwood
-farm run for your account, and draws it on the game map.
+A single-page tool that works out the fastest herb, tree, fruit tree, hardwood,
+calquat and celastrus farm run for your account, and draws it on the game map.
 
 **Live site:** https://irpepper.github.io/osrs-farm-run-planner/
 
@@ -9,7 +9,7 @@ farm run for your account, and draws it on the game map.
 
 Routes are solved on a real travel graph rather than a hand-written list of "best teleports".
 
-- **103 nodes, 320+ edges** — every patch, teleport landing, spirit tree, fairy ring,
+- **107 nodes, 340+ edges** — every patch, teleport landing, spirit tree, fairy ring,
   mushtree and quetzal stop, with real world coordinates.
 - **Walking times are pathfound, not estimated.** Every walk edge is a breadth-first
   search over the game's collision map, so routes go around Falador's wall and through

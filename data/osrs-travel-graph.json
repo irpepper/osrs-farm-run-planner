@@ -873,6 +873,49 @@
    "x": 2792,
    "y": 3414,
    "kind": "hub"
+  },
+  {
+   "id": "ckr_ring",
+   "name": "Fairy ring CKR (Tai Bwo Wannai)",
+   "x": 2801,
+   "y": 3003,
+   "kind": "fairy"
+  },
+  {
+   "id": "calquat_tbw",
+   "name": "Tai Bwo Wannai",
+   "x": 2796,
+   "y": 3101,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "calquat"
+    }
+   ]
+  },
+  {
+   "id": "kastori_calquat",
+   "name": "Kastori",
+   "x": 1367,
+   "y": 3032,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "calquat"
+    }
+   ]
+  },
+  {
+   "id": "guild_celastrus",
+   "name": "Farming Guild",
+   "x": 1244,
+   "y": 3750,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "celastrus"
+    }
+   ]
   }
  ],
  "edges": [
@@ -10415,6 +10458,940 @@
      2933
     ]
    ]
+  },
+  {
+   "from": "calquat_tbw",
+   "to": "ckr_ring",
+   "weight": 36,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 110,
+   "path": [
+    [
+     2794,
+     3101
+    ],
+    [
+     2799,
+     3093
+    ],
+    [
+     2801,
+     3085
+    ],
+    [
+     2806,
+     3079
+    ],
+    [
+     2813,
+     3073
+    ],
+    [
+     2816,
+     3066
+    ],
+    [
+     2815,
+     3058
+    ],
+    [
+     2816,
+     3050
+    ],
+    [
+     2816,
+     3042
+    ],
+    [
+     2816,
+     3034
+    ],
+    [
+     2815,
+     3026
+    ],
+    [
+     2816,
+     3019
+    ],
+    [
+     2809,
+     3011
+    ],
+    [
+     2803,
+     3004
+    ],
+    [
+     2800,
+     3003
+    ]
+   ]
+  },
+  {
+   "from": "calquat_tbw",
+   "to": "brimhaven_portal",
+   "weight": 26,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 77,
+   "path": [
+    [
+     2794,
+     3101
+    ],
+    [
+     2795,
+     3109
+    ],
+    [
+     2795,
+     3117
+    ],
+    [
+     2788,
+     3125
+    ],
+    [
+     2780,
+     3133
+    ],
+    [
+     2772,
+     3141
+    ],
+    [
+     2767,
+     3149
+    ],
+    [
+     2766,
+     3157
+    ],
+    [
+     2759,
+     3165
+    ],
+    [
+     2756,
+     3173
+    ],
+    [
+     2757,
+     3178
+    ]
+   ]
+  },
+  {
+   "from": "calquat_tbw",
+   "to": "brimhaven",
+   "weight": 37,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 114,
+   "path": [
+    [
+     2794,
+     3101
+    ],
+    [
+     2795,
+     3109
+    ],
+    [
+     2795,
+     3117
+    ],
+    [
+     2788,
+     3125
+    ],
+    [
+     2780,
+     3133
+    ],
+    [
+     2772,
+     3141
+    ],
+    [
+     2767,
+     3149
+    ],
+    [
+     2766,
+     3157
+    ],
+    [
+     2765,
+     3165
+    ],
+    [
+     2764,
+     3173
+    ],
+    [
+     2758,
+     3181
+    ],
+    [
+     2758,
+     3189
+    ],
+    [
+     2758,
+     3197
+    ],
+    [
+     2761,
+     3205
+    ],
+    [
+     2766,
+     3213
+    ],
+    [
+     2765,
+     3214
+    ]
+   ]
+  },
+  {
+   "from": "calquat_tbw",
+   "to": "brimhaven_spirit",
+   "weight": 44,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 137,
+   "path": [
+    [
+     2794,
+     3101
+    ],
+    [
+     2795,
+     3109
+    ],
+    [
+     2795,
+     3117
+    ],
+    [
+     2788,
+     3125
+    ],
+    [
+     2780,
+     3133
+    ],
+    [
+     2772,
+     3141
+    ],
+    [
+     2767,
+     3149
+    ],
+    [
+     2766,
+     3157
+    ],
+    [
+     2765,
+     3165
+    ],
+    [
+     2767,
+     3172
+    ],
+    [
+     2772,
+     3180
+    ],
+    [
+     2777,
+     3185
+    ],
+    [
+     2784,
+     3182
+    ],
+    [
+     2792,
+     3180
+    ],
+    [
+     2800,
+     3179
+    ],
+    [
+     2801,
+     3187
+    ],
+    [
+     2801,
+     3195
+    ],
+    [
+     2799,
+     3202
+    ],
+    [
+     2800,
+     3202
+    ]
+   ]
+  },
+  {
+   "from": "calquat_tbw",
+   "to": "brimhaven_port",
+   "weight": 43,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 133,
+   "path": [
+    [
+     2794,
+     3101
+    ],
+    [
+     2795,
+     3109
+    ],
+    [
+     2795,
+     3117
+    ],
+    [
+     2788,
+     3125
+    ],
+    [
+     2780,
+     3133
+    ],
+    [
+     2772,
+     3141
+    ],
+    [
+     2767,
+     3149
+    ],
+    [
+     2766,
+     3157
+    ],
+    [
+     2765,
+     3165
+    ],
+    [
+     2764,
+     3173
+    ],
+    [
+     2758,
+     3181
+    ],
+    [
+     2758,
+     3189
+    ],
+    [
+     2758,
+     3197
+    ],
+    [
+     2761,
+     3205
+    ],
+    [
+     2766,
+     3213
+    ],
+    [
+     2771,
+     3221
+    ],
+    [
+     2772,
+     3229
+    ],
+    [
+     2772,
+     3234
+    ]
+   ]
+  },
+  {
+   "from": "kastori_calquat",
+   "to": "kastori",
+   "weight": 12,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 29,
+   "path": [
+    [
+     1365,
+     3032
+    ],
+    [
+     1361,
+     3038
+    ],
+    [
+     1360,
+     3046
+    ],
+    [
+     1354,
+     3054
+    ],
+    [
+     1350,
+     3058
+    ]
+   ]
+  },
+  {
+   "from": "kastori_calquat",
+   "to": "quetzal_kastori",
+   "weight": 9,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 21,
+   "path": [
+    [
+     1365,
+     3032
+    ],
+    [
+     1357,
+     3032
+    ],
+    [
+     1349,
+     3027
+    ],
+    [
+     1344,
+     3022
+    ]
+   ]
+  },
+  {
+   "from": "guild_celastrus",
+   "to": "guild_fruit",
+   "weight": 6,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 11,
+   "path": [
+    [
+     1242,
+     3750
+    ],
+    [
+     1244,
+     3758
+    ],
+    [
+     1243,
+     3760
+    ]
+   ]
+  },
+  {
+   "from": "guild_celastrus",
+   "to": "guild_tree",
+   "weight": 17,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 46,
+   "path": [
+    [
+     1242,
+     3750
+    ],
+    [
+     1246,
+     3750
+    ],
+    [
+     1248,
+     3742
+    ],
+    [
+     1248,
+     3734
+    ],
+    [
+     1242,
+     3730
+    ],
+    [
+     1234,
+     3732
+    ],
+    [
+     1230,
+     3736
+    ]
+   ]
+  },
+  {
+   "from": "guild_celastrus",
+   "to": "guild_herb",
+   "weight": 16,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 45,
+   "path": [
+    [
+     1242,
+     3750
+    ],
+    [
+     1246,
+     3750
+    ],
+    [
+     1248,
+     3742
+    ],
+    [
+     1248,
+     3734
+    ],
+    [
+     1255,
+     3730
+    ],
+    [
+     1262,
+     3733
+    ],
+    [
+     1266,
+     3738
+    ]
+   ]
+  },
+  {
+   "from": "guild_celastrus",
+   "to": "farming_guild_gate",
+   "weight": 15,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 39,
+   "path": [
+    [
+     1242,
+     3750
+    ],
+    [
+     1246,
+     3750
+    ],
+    [
+     1248,
+     3742
+    ],
+    [
+     1248,
+     3734
+    ],
+    [
+     1247,
+     3726
+    ],
+    [
+     1248,
+     3719
+    ]
+   ]
+  },
+  {
+   "from": "guild_celastrus",
+   "to": "guild_spirit",
+   "weight": 6,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 11,
+   "path": [
+    [
+     1242,
+     3750
+    ],
+    [
+     1248,
+     3752
+    ],
+    [
+     1251,
+     3749
+    ]
+   ]
+  },
+  {
+   "from": "ckr_ring",
+   "to": "brimhaven_portal",
+   "weight": 58,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 182,
+   "path": [
+    [
+     2800,
+     3003
+    ],
+    [
+     2803,
+     3006
+    ],
+    [
+     2810,
+     3013
+    ],
+    [
+     2815,
+     3021
+    ],
+    [
+     2815,
+     3028
+    ],
+    [
+     2815,
+     3036
+    ],
+    [
+     2816,
+     3044
+    ],
+    [
+     2816,
+     3052
+    ],
+    [
+     2815,
+     3060
+    ],
+    [
+     2816,
+     3068
+    ],
+    [
+     2816,
+     3076
+    ],
+    [
+     2816,
+     3084
+    ],
+    [
+     2816,
+     3092
+    ],
+    [
+     2810,
+     3100
+    ],
+    [
+     2805,
+     3108
+    ],
+    [
+     2797,
+     3116
+    ],
+    [
+     2789,
+     3124
+    ],
+    [
+     2781,
+     3132
+    ],
+    [
+     2773,
+     3140
+    ],
+    [
+     2767,
+     3148
+    ],
+    [
+     2767,
+     3156
+    ],
+    [
+     2760,
+     3164
+    ],
+    [
+     2756,
+     3172
+    ],
+    [
+     2757,
+     3178
+    ]
+   ]
+  },
+  {
+   "from": "ckr_ring",
+   "to": "brimhaven",
+   "weight": 69,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 219,
+   "path": [
+    [
+     2800,
+     3003
+    ],
+    [
+     2803,
+     3006
+    ],
+    [
+     2810,
+     3013
+    ],
+    [
+     2815,
+     3021
+    ],
+    [
+     2815,
+     3028
+    ],
+    [
+     2815,
+     3036
+    ],
+    [
+     2816,
+     3044
+    ],
+    [
+     2816,
+     3052
+    ],
+    [
+     2815,
+     3060
+    ],
+    [
+     2816,
+     3068
+    ],
+    [
+     2816,
+     3076
+    ],
+    [
+     2816,
+     3084
+    ],
+    [
+     2816,
+     3092
+    ],
+    [
+     2810,
+     3100
+    ],
+    [
+     2805,
+     3108
+    ],
+    [
+     2797,
+     3116
+    ],
+    [
+     2789,
+     3124
+    ],
+    [
+     2781,
+     3132
+    ],
+    [
+     2773,
+     3140
+    ],
+    [
+     2767,
+     3148
+    ],
+    [
+     2767,
+     3156
+    ],
+    [
+     2765,
+     3164
+    ],
+    [
+     2765,
+     3172
+    ],
+    [
+     2759,
+     3180
+    ],
+    [
+     2758,
+     3188
+    ],
+    [
+     2758,
+     3196
+    ],
+    [
+     2760,
+     3204
+    ],
+    [
+     2766,
+     3212
+    ],
+    [
+     2765,
+     3214
+    ]
+   ]
+  },
+  {
+   "from": "ckr_ring",
+   "to": "bkp_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ckr_ring",
+   "to": "djp_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ckr_ring",
+   "to": "ciq_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ckr_ring",
+   "to": "cir_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ckr_ring",
+   "to": "cjr_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ckr_ring",
+   "to": "cks_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ckr_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
   }
  ]
 }
