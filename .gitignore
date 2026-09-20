@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+map_full*.png
+map_*.jpg
+build/
+shortest-path/

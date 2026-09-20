@@ -1,0 +1,7107 @@
+{
+ "about": "OSRS farm run travel graph. Nodes are patches, teleport landings and transport network points, with real world coordinates. Walk edge weights come from breadth-first search over the RuneLite Shortest Path plugin's collision map (true tile path, not straight line) at running speed of 2 tiles per 0.6s tick plus 3s of doors and clicks; 'tiles' records the path length. Edges marked estimated could not be pathfound (gates or stairs the collision map treats as sealed) and keep a manual weight. An edge with from='*' is a teleport usable anywhere. Agility shortcuts and NPC escorts (mode 'shortcut') come from the same plugin's transport tables.",
+ "transport_notes": "transport values match the toggle ids in the planner; requires values are quest and diary ids.",
+ "nodes": [
+  {
+   "id": "falador_farm",
+   "name": "Falador farm",
+   "x": 3055,
+   "y": 3308,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb"
+    }
+   ]
+  },
+  {
+   "id": "falador_park",
+   "name": "Falador park",
+   "x": 3004,
+   "y": 3373,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree"
+    }
+   ]
+  },
+  {
+   "id": "taverley",
+   "name": "Taverley",
+   "x": 2936,
+   "y": 3438,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree"
+    }
+   ]
+  },
+  {
+   "id": "lumbridge",
+   "name": "Lumbridge",
+   "x": 3193,
+   "y": 3231,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree"
+    }
+   ]
+  },
+  {
+   "id": "varrock",
+   "name": "Varrock palace",
+   "x": 3229,
+   "y": 3459,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree"
+    }
+   ]
+  },
+  {
+   "id": "ardougne_farm",
+   "name": "Ardougne farm",
+   "x": 2667,
+   "y": 3375,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb"
+    }
+   ]
+  },
+  {
+   "id": "brimhaven",
+   "name": "Brimhaven",
+   "x": 2765,
+   "y": 3213,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit"
+    }
+   ]
+  },
+  {
+   "id": "tgv",
+   "name": "Tree Gnome Village",
+   "x": 2490,
+   "y": 3180,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit"
+    }
+   ]
+  },
+  {
+   "id": "lletya",
+   "name": "Lletya",
+   "x": 2347,
+   "y": 3162,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit",
+     "req": [
+      "me1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "morytania",
+   "name": "Morytania farm",
+   "x": 3602,
+   "y": 3526,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb"
+    }
+   ]
+  },
+  {
+   "id": "harmony",
+   "name": "Harmony Island",
+   "x": 3790,
+   "y": 2838,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb",
+     "req": [
+      "mory_elite"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trollheim",
+   "name": "Trollheim",
+   "x": 2828,
+   "y": 3696,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb",
+     "req": [
+      "mabs"
+     ],
+     "note": "disease-free"
+    }
+   ]
+  },
+  {
+   "id": "weiss",
+   "name": "Weiss",
+   "x": 2847,
+   "y": 3933,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb",
+     "req": [
+      "mfwma"
+     ],
+     "note": "disease-free"
+    }
+   ]
+  },
+  {
+   "id": "hosidius",
+   "name": "Hosidius",
+   "x": 1735,
+   "y": 3555,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb",
+     "note": "disease-free"
+    }
+   ]
+  },
+  {
+   "id": "civitas",
+   "name": "Civitas illa Fortis",
+   "x": 1586,
+   "y": 3099,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb",
+     "req": [
+      "children_sun"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cabbage_patch",
+   "name": "Cabbage patch",
+   "x": 3052,
+   "y": 3291,
+   "kind": "hub"
+  },
+  {
+   "id": "draynor",
+   "name": "Draynor Village",
+   "x": 3093,
+   "y": 3244,
+   "kind": "hub"
+  },
+  {
+   "id": "falador_centre",
+   "name": "Falador centre",
+   "x": 2964,
+   "y": 3378,
+   "kind": "hub"
+  },
+  {
+   "id": "crafting_guild",
+   "name": "Crafting Guild",
+   "x": 2933,
+   "y": 3295,
+   "kind": "hub"
+  },
+  {
+   "id": "taverley_portal",
+   "name": "Taverley house portal",
+   "x": 2893,
+   "y": 3465,
+   "kind": "hub"
+  },
+  {
+   "id": "burthorpe",
+   "name": "Burthorpe",
+   "x": 2899,
+   "y": 3553,
+   "kind": "hub"
+  },
+  {
+   "id": "lumbridge_castle",
+   "name": "Lumbridge castle",
+   "x": 3221,
+   "y": 3218,
+   "kind": "hub"
+  },
+  {
+   "id": "varrock_square",
+   "name": "Varrock square",
+   "x": 3213,
+   "y": 3424,
+   "kind": "hub"
+  },
+  {
+   "id": "ge",
+   "name": "Grand Exchange",
+   "x": 3165,
+   "y": 3479,
+   "kind": "hub"
+  },
+  {
+   "id": "camelot",
+   "name": "Camelot",
+   "x": 2757,
+   "y": 3479,
+   "kind": "hub"
+  },
+  {
+   "id": "catherby_bank",
+   "name": "Catherby bank",
+   "x": 2801,
+   "y": 3449,
+   "kind": "hub"
+  },
+  {
+   "id": "monastery",
+   "name": "Ardougne Monastery",
+   "x": 2607,
+   "y": 3221,
+   "kind": "hub"
+  },
+  {
+   "id": "fishing_guild",
+   "name": "Fishing Guild",
+   "x": 2613,
+   "y": 3391,
+   "kind": "hub"
+  },
+  {
+   "id": "ardougne_market",
+   "name": "Ardougne market",
+   "x": 2662,
+   "y": 3305,
+   "kind": "hub"
+  },
+  {
+   "id": "ardougne_docks",
+   "name": "Ardougne docks",
+   "x": 2683,
+   "y": 3274,
+   "kind": "hub"
+  },
+  {
+   "id": "brimhaven_port",
+   "name": "Brimhaven port",
+   "x": 2772,
+   "y": 3234,
+   "kind": "hub"
+  },
+  {
+   "id": "brimhaven_portal",
+   "name": "Brimhaven house portal",
+   "x": 2757,
+   "y": 3178,
+   "kind": "hub"
+  },
+  {
+   "id": "grand_tree",
+   "name": "Grand Tree",
+   "x": 2465,
+   "y": 3495,
+   "kind": "hub"
+  },
+  {
+   "id": "slayer_cave",
+   "name": "Stronghold Slayer Cave",
+   "x": 2431,
+   "y": 3422,
+   "kind": "hub"
+  },
+  {
+   "id": "prif",
+   "name": "Prifddinas",
+   "x": 3274,
+   "y": 6123,
+   "kind": "hub"
+  },
+  {
+   "id": "castle_wars",
+   "name": "Castle Wars",
+   "x": 2440,
+   "y": 3090,
+   "kind": "hub"
+  },
+  {
+   "id": "ectofuntus",
+   "name": "Ectofuntus",
+   "x": 3658,
+   "y": 3517,
+   "kind": "hub"
+  },
+  {
+   "id": "canifis",
+   "name": "Canifis",
+   "x": 3494,
+   "y": 3473,
+   "kind": "hub"
+  },
+  {
+   "id": "trollheim_top",
+   "name": "Trollheim summit",
+   "x": 2890,
+   "y": 3679,
+   "kind": "hub"
+  },
+  {
+   "id": "xerics_glade",
+   "name": "Xeric's Glade",
+   "x": 1752,
+   "y": 3566,
+   "kind": "hub"
+  },
+  {
+   "id": "hosidius_portal",
+   "name": "Hosidius house portal",
+   "x": 1743,
+   "y": 3517,
+   "kind": "hub"
+  },
+  {
+   "id": "kourend_castle",
+   "name": "Kourend Castle",
+   "x": 1641,
+   "y": 3673,
+   "kind": "hub"
+  },
+  {
+   "id": "farming_guild_gate",
+   "name": "Farming Guild gate",
+   "x": 1248,
+   "y": 3719,
+   "kind": "hub"
+  },
+  {
+   "id": "civitas_square",
+   "name": "Civitas square",
+   "x": 1681,
+   "y": 3136,
+   "kind": "hub"
+  },
+  {
+   "id": "ge_spirit",
+   "name": "GE spirit tree",
+   "x": 3184,
+   "y": 3508,
+   "kind": "spirit"
+  },
+  {
+   "id": "prif_spirit",
+   "name": "Prifddinas spirit tree",
+   "x": 3274,
+   "y": 6123,
+   "kind": "spirit"
+  },
+  {
+   "id": "khazard_spirit",
+   "name": "Khazard spirit tree",
+   "x": 2555,
+   "y": 3259,
+   "kind": "spirit"
+  },
+  {
+   "id": "stronghold_spirit",
+   "name": "Stronghold spirit tree",
+   "x": 2460,
+   "y": 3444,
+   "kind": "spirit"
+  },
+  {
+   "id": "village_spirit",
+   "name": "Village spirit tree",
+   "x": 2543,
+   "y": 3167,
+   "kind": "spirit"
+  },
+  {
+   "id": "guild_spirit",
+   "name": "Farming Guild spirit tree",
+   "x": 1251,
+   "y": 3749,
+   "kind": "spirit"
+  },
+  {
+   "id": "hosidius_spirit",
+   "name": "Hosidius spirit tree",
+   "x": 1691,
+   "y": 3541,
+   "kind": "spirit"
+  },
+  {
+   "id": "brimhaven_spirit",
+   "name": "Brimhaven spirit tree",
+   "x": 2800,
+   "y": 3202,
+   "kind": "spirit"
+  },
+  {
+   "id": "bkp_ring",
+   "name": "Fairy ring BKP (Castle Wars)",
+   "x": 2385,
+   "y": 3035,
+   "kind": "fairy"
+  },
+  {
+   "id": "djp_ring",
+   "name": "Fairy ring DJP (Tower of Life)",
+   "x": 2658,
+   "y": 3230,
+   "kind": "fairy"
+  },
+  {
+   "id": "ciq_ring",
+   "name": "Fairy ring CIQ (north of Yanille)",
+   "x": 2528,
+   "y": 3127,
+   "kind": "fairy"
+  },
+  {
+   "id": "cir_ring",
+   "name": "Fairy ring CIR (Kebos)",
+   "x": 1302,
+   "y": 3762,
+   "kind": "fairy"
+  },
+  {
+   "id": "cjr_ring",
+   "name": "Fairy ring CJR (Sinclair)",
+   "x": 2705,
+   "y": 3576,
+   "kind": "fairy"
+  },
+  {
+   "id": "cks_ring",
+   "name": "Fairy ring CKS (Canifis)",
+   "x": 3447,
+   "y": 3470,
+   "kind": "fairy"
+  },
+  {
+   "id": "zanaris",
+   "name": "Zanaris",
+   "x": 2412,
+   "y": 4434,
+   "kind": "fairy"
+  },
+  {
+   "id": "elkoy_out",
+   "name": "Elkoy (maze entrance)",
+   "x": 2504,
+   "y": 3191,
+   "kind": "hub"
+  },
+  {
+   "id": "elkoy_in",
+   "name": "Elkoy (village side)",
+   "x": 2515,
+   "y": 3159,
+   "kind": "hub"
+  },
+  {
+   "id": "sarim_spirit",
+   "name": "Port Sarim spirit tree",
+   "x": 3058,
+   "y": 3257,
+   "kind": "spirit"
+  },
+  {
+   "id": "etceteria_spirit",
+   "name": "Etceteria spirit tree",
+   "x": 2613,
+   "y": 3855,
+   "kind": "spirit"
+  },
+  {
+   "id": "ardy_cloak_farm",
+   "name": "Ardougne cloak landing (farm)",
+   "x": 2665,
+   "y": 3374,
+   "kind": "hub"
+  },
+  {
+   "id": "hardwood",
+   "name": "Fossil Island hardwood patches",
+   "x": 3708,
+   "y": 3833,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "hardwood",
+     "farm": 35,
+     "req": [
+      "bone_voyage"
+     ],
+     "note": "three patches"
+    }
+   ]
+  },
+  {
+   "id": "mushtree_hill",
+   "name": "Mushtree: House on the Hill",
+   "x": 3764,
+   "y": 3879,
+   "kind": "mushtree"
+  },
+  {
+   "id": "mushtree_meadow",
+   "name": "Mushtree: Mushroom Meadow",
+   "x": 3676,
+   "y": 3871,
+   "kind": "mushtree"
+  },
+  {
+   "id": "mushtree_verdant",
+   "name": "Mushtree: Verdant Valley",
+   "x": 3757,
+   "y": 3756,
+   "kind": "mushtree"
+  },
+  {
+   "id": "mushtree_swamp",
+   "name": "Mushtree: Sticky Swamp",
+   "x": 3676,
+   "y": 3755,
+   "kind": "mushtree"
+  },
+  {
+   "id": "catherby_fruit",
+   "name": "Catherby fruit tree",
+   "x": 2861,
+   "y": 3434,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit"
+    }
+   ]
+  },
+  {
+   "id": "gnome_fruit",
+   "name": "Stronghold fruit tree",
+   "x": 2476,
+   "y": 3446,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit"
+    }
+   ]
+  },
+  {
+   "id": "guild_tree",
+   "name": "Farming Guild tree patch",
+   "x": 1232,
+   "y": 3736,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree",
+     "farm": 65
+    }
+   ]
+  },
+  {
+   "id": "guild_fruit",
+   "name": "Farming Guild fruit tree",
+   "x": 1243,
+   "y": 3759,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit",
+     "farm": 85
+    }
+   ]
+  },
+  {
+   "id": "quetzal_auburnvale",
+   "name": "Quetzal: Auburnvale",
+   "x": 1411,
+   "y": 3361,
+   "kind": "hub"
+  },
+  {
+   "id": "quetzal_kastori",
+   "name": "Quetzal: Kastori",
+   "x": 1344,
+   "y": 3022,
+   "kind": "hub"
+  },
+  {
+   "id": "catherby_herb",
+   "name": "Catherby herb patch",
+   "x": 2810,
+   "y": 3464,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb"
+    }
+   ]
+  },
+  {
+   "id": "gnome_tree",
+   "name": "Stronghold tree patch",
+   "x": 2436,
+   "y": 3415,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree"
+    }
+   ]
+  },
+  {
+   "id": "guild_herb",
+   "name": "Farming Guild herb patch",
+   "x": 1266,
+   "y": 3738,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "herb",
+     "farm": 65
+    }
+   ]
+  },
+  {
+   "id": "digsite_barge",
+   "name": "Digsite barge",
+   "x": 3362,
+   "y": 3445,
+   "kind": "hub"
+  },
+  {
+   "id": "fossil_barge",
+   "name": "Fossil Island barge",
+   "x": 3724,
+   "y": 3807,
+   "kind": "hub"
+  },
+  {
+   "id": "port_sarim",
+   "name": "Port Sarim docks",
+   "x": 3055,
+   "y": 3245,
+   "kind": "hub"
+  },
+  {
+   "id": "port_piscarilius",
+   "name": "Port Piscarilius",
+   "x": 1824,
+   "y": 3691,
+   "kind": "hub"
+  },
+  {
+   "id": "lands_end",
+   "name": "Land's End",
+   "x": 1504,
+   "y": 3399,
+   "kind": "hub"
+  },
+  {
+   "id": "memoirs_hosidius",
+   "name": "Hosidius (Lancalliums)",
+   "x": 1714,
+   "y": 3611,
+   "kind": "hub"
+  },
+  {
+   "id": "quetzal_civitas",
+   "name": "Quetzal: Civitas illa Fortis",
+   "x": 1697,
+   "y": 3140,
+   "kind": "hub"
+  },
+  {
+   "id": "varrock_quetzal",
+   "name": "Quetzal outside Varrock",
+   "x": 3280,
+   "y": 3412,
+   "kind": "hub"
+  },
+  {
+   "id": "nemus",
+   "name": "Nemus Retreat tree patch",
+   "x": 1366,
+   "y": 3321,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "tree"
+    }
+   ]
+  },
+  {
+   "id": "kastori",
+   "name": "Kastori fruit tree",
+   "x": 1350,
+   "y": 3057,
+   "kind": "patch",
+   "patches": [
+    {
+     "t": "fruit"
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "*",
+   "to": "cabbage_patch",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Explorer's ring \u2192 cabbage patch",
+   "transport": "explorer",
+   "requires": [
+    "lumby_med"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "draynor",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Amulet of glory \u2192 Draynor",
+   "transport": "glory",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "falador_centre",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Falador Teleport",
+   "transport": "spell",
+   "requires": [],
+   "magic": 37
+  },
+  {
+   "from": "*",
+   "to": "crafting_guild",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Skills necklace \u2192 Crafting Guild",
+   "transport": "skills",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "fishing_guild",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Skills necklace \u2192 Fishing Guild",
+   "transport": "skills",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "farming_guild_gate",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Skills necklace \u2192 Farming Guild",
+   "transport": "skills",
+   "requires": [],
+   "farm": 45
+  },
+  {
+   "from": "*",
+   "to": "falador_park",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Ring of wealth \u2192 Falador park",
+   "transport": "row",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "ge",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Ring of wealth \u2192 Grand Exchange",
+   "transport": "row",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "burthorpe",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Games necklace \u2192 Burthorpe",
+   "transport": "games",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "slayer_cave",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Slayer ring \u2192 Stronghold Slayer Cave",
+   "transport": "slayer_ring",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "castle_wars",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Ring of dueling \u2192 Castle Wars",
+   "transport": "duel_ring",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "lumbridge_castle",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Lumbridge Teleport",
+   "transport": "spell",
+   "requires": [],
+   "magic": 31
+  },
+  {
+   "from": "*",
+   "to": "varrock_square",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Varrock Teleport",
+   "transport": "spell",
+   "requires": [],
+   "magic": 25
+  },
+  {
+   "from": "*",
+   "to": "ge",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Varrock Teleport (GE option)",
+   "transport": "spell",
+   "requires": [
+    "varrock_med"
+   ],
+   "magic": 25
+  },
+  {
+   "from": "*",
+   "to": "camelot",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Camelot Teleport",
+   "transport": "spell",
+   "requires": [],
+   "magic": 45
+  },
+  {
+   "from": "*",
+   "to": "ardougne_market",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Ardougne Teleport",
+   "transport": "spell",
+   "requires": [
+    "plague_city"
+   ],
+   "magic": 51
+  },
+  {
+   "from": "*",
+   "to": "kourend_castle",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Kourend Castle Teleport",
+   "transport": "spell",
+   "requires": [
+    "client_kourend"
+   ],
+   "magic": 48
+  },
+  {
+   "from": "*",
+   "to": "civitas_square",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Civitas illa Fortis Teleport",
+   "transport": "spell",
+   "requires": [
+    "twilight"
+   ],
+   "magic": 54
+  },
+  {
+   "from": "*",
+   "to": "trollheim_top",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Trollheim Teleport",
+   "transport": "spell",
+   "requires": [
+    "eadgars_ruse"
+   ],
+   "magic": 61
+  },
+  {
+   "from": "*",
+   "to": "catherby_bank",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Catherby Teleport",
+   "transport": "lunar",
+   "requires": [
+    "lunar_dip"
+   ],
+   "magic": 87
+  },
+  {
+   "from": "*",
+   "to": "canifis",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Kharyrll Teleport",
+   "transport": "ancient",
+   "requires": [
+    "dt1"
+   ],
+   "magic": 66
+  },
+  {
+   "from": "*",
+   "to": "harmony",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Harmony Island Teleport",
+   "transport": "arceuus",
+   "requires": [
+    "gbr"
+   ],
+   "magic": 65
+  },
+  {
+   "from": "*",
+   "to": "monastery",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Ardougne cloak \u2192 Monastery",
+   "transport": "ardy_cloak",
+   "requires": [
+    "ardy_easy"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "ectofuntus",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Ectophial",
+   "transport": "ectophial",
+   "requires": [
+    "ghosts_ahoy"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "trollheim_top",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Stony basalt",
+   "transport": "stony_basalt",
+   "requires": [
+    "mfwma"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "weiss",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Icy basalt",
+   "transport": "icy_basalt",
+   "requires": [
+    "mfwma"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "grand_tree",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Royal seed pod",
+   "transport": "seed_pod",
+   "requires": [
+    "mm2"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "lletya",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Teleport crystal \u2192 Lletya",
+   "transport": "tele_crystal",
+   "requires": [
+    "me1"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "prif",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Teleport crystal \u2192 Prifddinas",
+   "transport": "tele_crystal",
+   "requires": [
+    "sote"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "xerics_glade",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Xeric's talisman \u2192 Xeric's Glade",
+   "transport": "xeric",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "taverley_portal",
+   "weight": 10,
+   "mode": "teleport",
+   "method": "Teleport to house (Taverley)",
+   "transport": "house_taverley",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "brimhaven_portal",
+   "weight": 10,
+   "mode": "teleport",
+   "method": "Teleport to house (Brimhaven)",
+   "transport": "house_brimhaven",
+   "requires": []
+  },
+  {
+   "from": "*",
+   "to": "hosidius_portal",
+   "weight": 10,
+   "mode": "teleport",
+   "method": "Teleport to house (Hosidius)",
+   "transport": "house_hosidius",
+   "requires": []
+  },
+  {
+   "from": "cabbage_patch",
+   "to": "falador_farm",
+   "weight": 6,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 21,
+   "path": [
+    [
+     3052,
+     3291
+    ],
+    [
+     3052,
+     3299
+    ],
+    [
+     3050,
+     3303
+    ]
+   ]
+  },
+  {
+   "from": "draynor",
+   "to": "falador_farm",
+   "weight": 26,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 87,
+   "path": [
+    [
+     3093,
+     3244
+    ],
+    [
+     3087,
+     3249
+    ],
+    [
+     3081,
+     3254
+    ],
+    [
+     3080,
+     3262
+    ],
+    [
+     3075,
+     3268
+    ],
+    [
+     3071,
+     3276
+    ],
+    [
+     3063,
+     3284
+    ],
+    [
+     3055,
+     3292
+    ],
+    [
+     3052,
+     3300
+    ],
+    [
+     3050,
+     3303
+    ]
+   ]
+  },
+  {
+   "from": "falador_centre",
+   "to": "falador_park",
+   "weight": 13,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 33,
+   "path": [
+    [
+     2964,
+     3378
+    ],
+    [
+     2972,
+     3377
+    ],
+    [
+     2980,
+     3373
+    ],
+    [
+     2988,
+     3368
+    ],
+    [
+     2996,
+     3365
+    ]
+   ]
+  },
+  {
+   "from": "falador_centre",
+   "to": "falador_farm",
+   "weight": 39,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 130,
+   "path": [
+    [
+     2964,
+     3378
+    ],
+    [
+     2966,
+     3370
+    ],
+    [
+     2974,
+     3366
+    ],
+    [
+     2982,
+     3362
+    ],
+    [
+     2990,
+     3360
+    ],
+    [
+     2998,
+     3356
+    ],
+    [
+     3006,
+     3349
+    ],
+    [
+     3006,
+     3341
+    ],
+    [
+     3006,
+     3333
+    ],
+    [
+     3005,
+     3325
+    ],
+    [
+     3013,
+     3319
+    ],
+    [
+     3020,
+     3320
+    ],
+    [
+     3028,
+     3317
+    ],
+    [
+     3036,
+     3315
+    ],
+    [
+     3044,
+     3316
+    ],
+    [
+     3049,
+     3317
+    ]
+   ]
+  },
+  {
+   "from": "falador_park",
+   "to": "falador_farm",
+   "weight": 35,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 108,
+   "path": [
+    [
+     3002,
+     3373
+    ],
+    [
+     2994,
+     3373
+    ],
+    [
+     2995,
+     3365
+    ],
+    [
+     3000,
+     3357
+    ],
+    [
+     3006,
+     3349
+    ],
+    [
+     3006,
+     3341
+    ],
+    [
+     3006,
+     3333
+    ],
+    [
+     3005,
+     3325
+    ],
+    [
+     3013,
+     3319
+    ],
+    [
+     3020,
+     3320
+    ],
+    [
+     3028,
+     3317
+    ],
+    [
+     3036,
+     3315
+    ],
+    [
+     3044,
+     3316
+    ],
+    [
+     3050,
+     3316
+    ]
+   ]
+  },
+  {
+   "from": "crafting_guild",
+   "to": "falador_farm",
+   "weight": 39,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 129,
+   "path": [
+    [
+     2933,
+     3295
+    ],
+    [
+     2941,
+     3292
+    ],
+    [
+     2949,
+     3287
+    ],
+    [
+     2957,
+     3289
+    ],
+    [
+     2965,
+     3294
+    ],
+    [
+     2973,
+     3299
+    ],
+    [
+     2981,
+     3302
+    ],
+    [
+     2989,
+     3301
+    ],
+    [
+     2997,
+     3301
+    ],
+    [
+     3005,
+     3307
+    ],
+    [
+     3013,
+     3314
+    ],
+    [
+     3021,
+     3314
+    ],
+    [
+     3029,
+     3314
+    ],
+    [
+     3037,
+     3314
+    ],
+    [
+     3045,
+     3316
+    ],
+    [
+     3049,
+     3317
+    ]
+   ]
+  },
+  {
+   "from": "falador_park",
+   "to": "taverley",
+   "weight": 36,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 113,
+   "weight_agility": 29,
+   "agility": 66,
+   "path": [
+    [
+     3002,
+     3373
+    ],
+    [
+     2994,
+     3374
+    ],
+    [
+     2986,
+     3382
+    ],
+    [
+     2979,
+     3386
+    ],
+    [
+     2971,
+     3387
+    ],
+    [
+     2964,
+     3395
+    ],
+    [
+     2956,
+     3403
+    ],
+    [
+     2955,
+     3411
+    ],
+    [
+     2951,
+     3419
+    ],
+    [
+     2946,
+     3427
+    ],
+    [
+     2946,
+     3435
+    ],
+    [
+     2946,
+     3443
+    ],
+    [
+     2944,
+     3446
+    ]
+   ]
+  },
+  {
+   "from": "falador_farm",
+   "to": "taverley",
+   "weight": 65,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 216,
+   "path": [
+    [
+     3057,
+     3311
+    ],
+    [
+     3054,
+     3317
+    ],
+    [
+     3046,
+     3317
+    ],
+    [
+     3038,
+     3314
+    ],
+    [
+     3030,
+     3319
+    ],
+    [
+     3022,
+     3323
+    ],
+    [
+     3015,
+     3320
+    ],
+    [
+     3007,
+     3323
+    ],
+    [
+     3006,
+     3331
+    ],
+    [
+     3006,
+     3339
+    ],
+    [
+     3006,
+     3347
+    ],
+    [
+     3000,
+     3355
+    ],
+    [
+     2997,
+     3363
+    ],
+    [
+     2990,
+     3370
+    ],
+    [
+     2982,
+     3378
+    ],
+    [
+     2979,
+     3385
+    ],
+    [
+     2971,
+     3387
+    ],
+    [
+     2964,
+     3395
+    ],
+    [
+     2956,
+     3403
+    ],
+    [
+     2955,
+     3411
+    ],
+    [
+     2951,
+     3419
+    ],
+    [
+     2946,
+     3427
+    ],
+    [
+     2946,
+     3435
+    ],
+    [
+     2946,
+     3443
+    ],
+    [
+     2943,
+     3449
+    ],
+    [
+     2935,
+     3450
+    ],
+    [
+     2930,
+     3445
+    ]
+   ],
+   "weight_agility": 58,
+   "agility": 66
+  },
+  {
+   "from": "burthorpe",
+   "to": "taverley",
+   "weight": 38,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 125,
+   "path": [
+    [
+     2899,
+     3553
+    ],
+    [
+     2898,
+     3545
+    ],
+    [
+     2903,
+     3537
+    ],
+    [
+     2903,
+     3529
+    ],
+    [
+     2909,
+     3524
+    ],
+    [
+     2913,
+     3516
+    ],
+    [
+     2912,
+     3508
+    ],
+    [
+     2919,
+     3500
+    ],
+    [
+     2920,
+     3492
+    ],
+    [
+     2928,
+     3484
+    ],
+    [
+     2931,
+     3476
+    ],
+    [
+     2937,
+     3470
+    ],
+    [
+     2938,
+     3462
+    ],
+    [
+     2934,
+     3455
+    ],
+    [
+     2928,
+     3447
+    ],
+    [
+     2928,
+     3445
+    ]
+   ]
+  },
+  {
+   "from": "taverley_portal",
+   "to": "taverley",
+   "weight": 17,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 55,
+   "path": [
+    [
+     2893,
+     3465
+    ],
+    [
+     2896,
+     3459
+    ],
+    [
+     2903,
+     3452
+    ],
+    [
+     2911,
+     3453
+    ],
+    [
+     2919,
+     3452
+    ],
+    [
+     2927,
+     3449
+    ],
+    [
+     2928,
+     3445
+    ]
+   ]
+  },
+  {
+   "from": "lumbridge_castle",
+   "to": "lumbridge",
+   "weight": 15,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 50,
+   "path": [
+    [
+     3221,
+     3218
+    ],
+    [
+     3217,
+     3226
+    ],
+    [
+     3211,
+     3229
+    ],
+    [
+     3203,
+     3231
+    ],
+    [
+     3201,
+     3229
+    ]
+   ]
+  },
+  {
+   "from": "varrock_square",
+   "to": "varrock",
+   "weight": 12,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 37,
+   "path": [
+    [
+     3213,
+     3424
+    ],
+    [
+     3212,
+     3432
+    ],
+    [
+     3213,
+     3440
+    ],
+    [
+     3218,
+     3446
+    ],
+    [
+     3221,
+     3449
+    ]
+   ]
+  },
+  {
+   "from": "ge",
+   "to": "varrock",
+   "weight": 26,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 83,
+   "path": [
+    [
+     3165,
+     3479
+    ],
+    [
+     3161,
+     3471
+    ],
+    [
+     3169,
+     3465
+    ],
+    [
+     3177,
+     3457
+    ],
+    [
+     3185,
+     3450
+    ],
+    [
+     3193,
+     3446
+    ],
+    [
+     3201,
+     3443
+    ],
+    [
+     3208,
+     3437
+    ],
+    [
+     3214,
+     3441
+    ],
+    [
+     3220,
+     3448
+    ],
+    [
+     3221,
+     3449
+    ]
+   ]
+  },
+  {
+   "from": "ge",
+   "to": "ge_spirit",
+   "weight": 9,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 30,
+   "path": [
+    [
+     3165,
+     3479
+    ],
+    [
+     3167,
+     3487
+    ],
+    [
+     3171,
+     3495
+    ],
+    [
+     3176,
+     3500
+    ]
+   ]
+  },
+  {
+   "from": "camelot",
+   "to": "catherby_herb",
+   "weight": 17,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 54,
+   "path": [
+    [
+     2757,
+     3479
+    ],
+    [
+     2765,
+     3476
+    ],
+    [
+     2773,
+     3474
+    ],
+    [
+     2781,
+     3472
+    ],
+    [
+     2789,
+     3472
+    ],
+    [
+     2797,
+     3469
+    ],
+    [
+     2802,
+     3470
+    ]
+   ]
+  },
+  {
+   "from": "catherby_bank",
+   "to": "catherby_herb",
+   "weight": 6,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 18,
+   "path": [
+    [
+     2801,
+     3449
+    ],
+    [
+     2803,
+     3456
+    ]
+   ]
+  },
+  {
+   "from": "cjr_ring",
+   "to": "catherby_herb",
+   "weight": 55,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 179,
+   "path": [
+    [
+     2704,
+     3576
+    ],
+    [
+     2704,
+     3571
+    ],
+    [
+     2710,
+     3565
+    ],
+    [
+     2713,
+     3557
+    ],
+    [
+     2718,
+     3551
+    ],
+    [
+     2725,
+     3545
+    ],
+    [
+     2733,
+     3540
+    ],
+    [
+     2729,
+     3532
+    ],
+    [
+     2735,
+     3524
+    ],
+    [
+     2740,
+     3516
+    ],
+    [
+     2739,
+     3508
+    ],
+    [
+     2740,
+     3500
+    ],
+    [
+     2736,
+     3492
+    ],
+    [
+     2741,
+     3484
+    ],
+    [
+     2744,
+     3477
+    ],
+    [
+     2752,
+     3473
+    ],
+    [
+     2760,
+     3475
+    ],
+    [
+     2768,
+     3476
+    ],
+    [
+     2776,
+     3474
+    ],
+    [
+     2784,
+     3472
+    ],
+    [
+     2792,
+     3469
+    ],
+    [
+     2800,
+     3470
+    ],
+    [
+     2802,
+     3470
+    ]
+   ]
+  },
+  {
+   "from": "monastery",
+   "to": "djp_ring",
+   "weight": 16,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 50,
+   "path": [
+    [
+     2607,
+     3221
+    ],
+    [
+     2615,
+     3217
+    ],
+    [
+     2623,
+     3218
+    ],
+    [
+     2631,
+     3222
+    ],
+    [
+     2639,
+     3223
+    ],
+    [
+     2647,
+     3225
+    ],
+    [
+     2650,
+     3225
+    ]
+   ]
+  },
+  {
+   "from": "monastery",
+   "to": "khazard_spirit",
+   "weight": 22,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 76,
+   "path": [
+    [
+     2607,
+     3221
+    ],
+    [
+     2601,
+     3224
+    ],
+    [
+     2593,
+     3226
+    ],
+    [
+     2585,
+     3228
+    ],
+    [
+     2577,
+     3228
+    ],
+    [
+     2569,
+     3232
+    ],
+    [
+     2563,
+     3236
+    ],
+    [
+     2557,
+     3244
+    ],
+    [
+     2561,
+     3251
+    ]
+   ]
+  },
+  {
+   "from": "monastery",
+   "to": "ardougne_farm",
+   "weight": 56,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 153,
+   "to_nearest_reachable_tile": true,
+   "path": [
+    [
+     2607,
+     3221
+    ],
+    [
+     2605,
+     3229
+    ],
+    [
+     2612,
+     3236
+    ],
+    [
+     2618,
+     3244
+    ],
+    [
+     2624,
+     3251
+    ],
+    [
+     2630,
+     3256
+    ],
+    [
+     2636,
+     3262
+    ],
+    [
+     2643,
+     3265
+    ],
+    [
+     2651,
+     3266
+    ],
+    [
+     2656,
+     3274
+    ],
+    [
+     2662,
+     3282
+    ],
+    [
+     2670,
+     3287
+    ],
+    [
+     2678,
+     3293
+    ],
+    [
+     2682,
+     3300
+    ],
+    [
+     2690,
+     3306
+    ],
+    [
+     2690,
+     3314
+    ],
+    [
+     2689,
+     3322
+    ],
+    [
+     2688,
+     3330
+    ],
+    [
+     2688,
+     3338
+    ],
+    [
+     2686,
+     3346
+    ],
+    [
+     2680,
+     3352
+    ],
+    [
+     2675,
+     3360
+    ],
+    [
+     2670,
+     3366
+    ]
+   ]
+  },
+  {
+   "from": "fishing_guild",
+   "to": "ardougne_farm",
+   "weight": 18,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 27,
+   "to_nearest_reachable_tile": true,
+   "path": [
+    [
+     2613,
+     3391
+    ],
+    [
+     2621,
+     3383
+    ],
+    [
+     2629,
+     3382
+    ],
+    [
+     2637,
+     3381
+    ],
+    [
+     2645,
+     3380
+    ],
+    [
+     2653,
+     3381
+    ],
+    [
+     2656,
+     3381
+    ]
+   ]
+  },
+  {
+   "from": "ardougne_market",
+   "to": "ardougne_farm",
+   "weight": 31,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 60,
+   "to_nearest_reachable_tile": true,
+   "path": [
+    [
+     2662,
+     3305
+    ],
+    [
+     2657,
+     3313
+    ],
+    [
+     2649,
+     3320
+    ],
+    [
+     2647,
+     3328
+    ],
+    [
+     2640,
+     3335
+    ],
+    [
+     2633,
+     3343
+    ],
+    [
+     2635,
+     3351
+    ],
+    [
+     2635,
+     3359
+    ],
+    [
+     2640,
+     3367
+    ],
+    [
+     2644,
+     3375
+    ],
+    [
+     2648,
+     3382
+    ],
+    [
+     2656,
+     3381
+    ]
+   ]
+  },
+  {
+   "from": "ardougne_market",
+   "to": "ardougne_docks",
+   "weight": 10,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 43,
+   "path": [
+    [
+     2662,
+     3305
+    ],
+    [
+     2668,
+     3297
+    ],
+    [
+     2670,
+     3290
+    ],
+    [
+     2675,
+     3282
+    ]
+   ]
+  },
+  {
+   "from": "brimhaven_port",
+   "to": "brimhaven",
+   "weight": 7,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 23,
+   "path": [
+    [
+     2772,
+     3234
+    ],
+    [
+     2771,
+     3226
+    ],
+    [
+     2771,
+     3221
+    ]
+   ]
+  },
+  {
+   "from": "brimhaven_portal",
+   "to": "brimhaven",
+   "weight": 12,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 34,
+   "path": [
+    [
+     2757,
+     3178
+    ],
+    [
+     2757,
+     3186
+    ],
+    [
+     2757,
+     3194
+    ],
+    [
+     2758,
+     3202
+    ],
+    [
+     2760,
+     3205
+    ]
+   ]
+  },
+  {
+   "from": "brimhaven_spirit",
+   "to": "brimhaven",
+   "weight": 12,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 40,
+   "path": [
+    [
+     2800,
+     3202
+    ],
+    [
+     2794,
+     3207
+    ],
+    [
+     2786,
+     3207
+    ],
+    [
+     2778,
+     3207
+    ],
+    [
+     2773,
+     3208
+    ]
+   ]
+  },
+  {
+   "from": "ciq_ring",
+   "to": "tgv",
+   "weight": 25,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 79,
+   "path": [
+    [
+     2528,
+     3126
+    ],
+    [
+     2521,
+     3125
+    ],
+    [
+     2513,
+     3127
+    ],
+    [
+     2505,
+     3131
+    ],
+    [
+     2497,
+     3135
+    ],
+    [
+     2492,
+     3141
+    ],
+    [
+     2486,
+     3149
+    ],
+    [
+     2480,
+     3157
+    ],
+    [
+     2479,
+     3165
+    ],
+    [
+     2482,
+     3172
+    ]
+   ]
+  },
+  {
+   "from": "village_spirit",
+   "to": "tgv",
+   "weight": 18,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 248,
+   "path": [
+    [
+     2543,
+     3167
+    ],
+    [
+     2535,
+     3165
+    ],
+    [
+     2527,
+     3162
+    ],
+    [
+     2519,
+     3163
+    ],
+    [
+     2503,
+     3190
+    ],
+    [
+     2498,
+     3188
+    ]
+   ]
+  },
+  {
+   "from": "ardougne_farm",
+   "to": "tgv",
+   "weight": 85,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     2667,
+     3376
+    ],
+    [
+     2661,
+     3378
+    ],
+    [
+     2654,
+     3381
+    ],
+    [
+     2646,
+     3381
+    ],
+    [
+     2643,
+     3373
+    ],
+    [
+     2640,
+     3365
+    ],
+    [
+     2635,
+     3357
+    ],
+    [
+     2633,
+     3349
+    ],
+    [
+     2625,
+     3348
+    ],
+    [
+     2621,
+     3340
+    ],
+    [
+     2613,
+     3342
+    ],
+    [
+     2608,
+     3336
+    ],
+    [
+     2607,
+     3328
+    ],
+    [
+     2607,
+     3320
+    ],
+    [
+     2607,
+     3312
+    ],
+    [
+     2606,
+     3304
+    ],
+    [
+     2602,
+     3296
+    ],
+    [
+     2594,
+     3295
+    ],
+    [
+     2592,
+     3288
+    ],
+    [
+     2586,
+     3280
+    ],
+    [
+     2584,
+     3272
+    ],
+    [
+     2580,
+     3264
+    ],
+    [
+     2572,
+     3264
+    ],
+    [
+     2564,
+     3263
+    ],
+    [
+     2561,
+     3255
+    ],
+    [
+     2559,
+     3247
+    ],
+    [
+     2557,
+     3239
+    ],
+    [
+     2550,
+     3231
+    ],
+    [
+     2542,
+     3228
+    ],
+    [
+     2534,
+     3220
+    ],
+    [
+     2526,
+     3213
+    ],
+    [
+     2518,
+     3205
+    ],
+    [
+     2510,
+     3200
+    ],
+    [
+     2503,
+     3194
+    ],
+    [
+     2498,
+     3188
+    ]
+   ]
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "gnome_fruit",
+   "weight": 6,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 14,
+   "path": [
+    [
+     2460,
+     3444
+    ],
+    [
+     2468,
+     3439
+    ]
+   ]
+  },
+  {
+   "from": "grand_tree",
+   "to": "gnome_fruit",
+   "weight": 16,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     2465,
+     3495
+    ],
+    [
+     2466,
+     3486
+    ],
+    [
+     2462,
+     3478
+    ],
+    [
+     2462,
+     3470
+    ],
+    [
+     2460,
+     3462
+    ],
+    [
+     2468,
+     3454
+    ]
+   ]
+  },
+  {
+   "from": "slayer_cave",
+   "to": "gnome_tree",
+   "weight": 4,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 46,
+   "path": [
+    [
+     2431,
+     3422
+    ]
+   ]
+  },
+  {
+   "from": "prif",
+   "to": "prif_spirit",
+   "weight": 4,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 0,
+   "path": [
+    [
+     3274,
+     6123
+    ]
+   ]
+  },
+  {
+   "from": "castle_wars",
+   "to": "bkp_ring",
+   "weight": 31,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 102,
+   "path": [
+    [
+     2440,
+     3090
+    ],
+    [
+     2448,
+     3089
+    ],
+    [
+     2454,
+     3086
+    ],
+    [
+     2454,
+     3078
+    ],
+    [
+     2449,
+     3070
+    ],
+    [
+     2441,
+     3063
+    ],
+    [
+     2435,
+     3058
+    ],
+    [
+     2427,
+     3050
+    ],
+    [
+     2421,
+     3044
+    ],
+    [
+     2413,
+     3040
+    ],
+    [
+     2405,
+     3035
+    ],
+    [
+     2397,
+     3032
+    ],
+    [
+     2393,
+     3033
+    ]
+   ]
+  },
+  {
+   "from": "ectofuntus",
+   "to": "morytania",
+   "weight": 22,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 69,
+   "path": [
+    [
+     3658,
+     3517
+    ],
+    [
+     3658,
+     3509
+    ],
+    [
+     3651,
+     3514
+    ],
+    [
+     3647,
+     3521
+    ],
+    [
+     3639,
+     3525
+    ],
+    [
+     3631,
+     3528
+    ],
+    [
+     3623,
+     3528
+    ],
+    [
+     3615,
+     3523
+    ],
+    [
+     3611,
+     3523
+    ]
+   ]
+  },
+  {
+   "from": "canifis",
+   "to": "morytania",
+   "weight": 41,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 136,
+   "path": [
+    [
+     3494,
+     3473
+    ],
+    [
+     3493,
+     3481
+    ],
+    [
+     3496,
+     3489
+    ],
+    [
+     3501,
+     3497
+    ],
+    [
+     3506,
+     3503
+    ],
+    [
+     3509,
+     3511
+    ],
+    [
+     3517,
+     3519
+    ],
+    [
+     3525,
+     3526
+    ],
+    [
+     3533,
+     3523
+    ],
+    [
+     3541,
+     3525
+    ],
+    [
+     3549,
+     3525
+    ],
+    [
+     3557,
+     3521
+    ],
+    [
+     3565,
+     3522
+    ],
+    [
+     3573,
+     3523
+    ],
+    [
+     3581,
+     3522
+    ],
+    [
+     3589,
+     3519
+    ],
+    [
+     3595,
+     3522
+    ]
+   ]
+  },
+  {
+   "from": "cks_ring",
+   "to": "canifis",
+   "weight": 15,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 56,
+   "path": [
+    [
+     3446,
+     3470
+    ],
+    [
+     3453,
+     3462
+    ],
+    [
+     3461,
+     3467
+    ],
+    [
+     3469,
+     3472
+    ],
+    [
+     3477,
+     3474
+    ],
+    [
+     3485,
+     3476
+    ],
+    [
+     3486,
+     3476
+    ]
+   ]
+  },
+  {
+   "from": "kourend_castle",
+   "to": "hosidius",
+   "weight": 55,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 186,
+   "path": [
+    [
+     1641,
+     3673
+    ],
+    [
+     1634,
+     3665
+    ],
+    [
+     1627,
+     3660
+    ],
+    [
+     1628,
+     3652
+    ],
+    [
+     1627,
+     3644
+    ],
+    [
+     1630,
+     3636
+    ],
+    [
+     1638,
+     3636
+    ],
+    [
+     1646,
+     3636
+    ],
+    [
+     1652,
+     3629
+    ],
+    [
+     1660,
+     3622
+    ],
+    [
+     1667,
+     3617
+    ],
+    [
+     1673,
+     3611
+    ],
+    [
+     1679,
+     3608
+    ],
+    [
+     1687,
+     3600
+    ],
+    [
+     1695,
+     3595
+    ],
+    [
+     1703,
+     3596
+    ],
+    [
+     1710,
+     3593
+    ],
+    [
+     1718,
+     3593
+    ],
+    [
+     1726,
+     3590
+    ],
+    [
+     1725,
+     3582
+    ],
+    [
+     1729,
+     3574
+    ],
+    [
+     1727,
+     3566
+    ],
+    [
+     1731,
+     3558
+    ]
+   ]
+  },
+  {
+   "from": "xerics_glade",
+   "to": "hosidius",
+   "weight": 7,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 27,
+   "path": [
+    [
+     1752,
+     3566
+    ],
+    [
+     1745,
+     3567
+    ],
+    [
+     1742,
+     3559
+    ],
+    [
+     1741,
+     3558
+    ]
+   ]
+  },
+  {
+   "from": "hosidius_portal",
+   "to": "hosidius",
+   "weight": 13,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 36,
+   "path": [
+    [
+     1743,
+     3517
+    ],
+    [
+     1742,
+     3525
+    ],
+    [
+     1741,
+     3533
+    ],
+    [
+     1739,
+     3541
+    ],
+    [
+     1738,
+     3542
+    ]
+   ]
+  },
+  {
+   "from": "hosidius_spirit",
+   "to": "hosidius",
+   "weight": 33,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 104,
+   "path": [
+    [
+     1691,
+     3541
+    ],
+    [
+     1698,
+     3533
+    ],
+    [
+     1704,
+     3527
+    ],
+    [
+     1710,
+     3524
+    ],
+    [
+     1716,
+     3516
+    ],
+    [
+     1720,
+     3509
+    ],
+    [
+     1723,
+     3501
+    ],
+    [
+     1728,
+     3506
+    ],
+    [
+     1734,
+     3513
+    ],
+    [
+     1736,
+     3521
+    ],
+    [
+     1732,
+     3529
+    ],
+    [
+     1735,
+     3537
+    ],
+    [
+     1736,
+     3542
+    ]
+   ],
+   "weight_agility": 15,
+   "agility": 45
+  },
+  {
+   "from": "farming_guild_gate",
+   "to": "guild_tree",
+   "weight": 8,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 2,
+   "path": [
+    [
+     1248,
+     3719
+    ],
+    [
+     1247,
+     3727
+    ],
+    [
+     1240,
+     3728
+    ]
+   ]
+  },
+  {
+   "from": "cir_ring",
+   "to": "guild_herb",
+   "weight": 12,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 68,
+   "path": [
+    [
+     1301,
+     3762
+    ],
+    [
+     1293,
+     3757
+    ],
+    [
+     1285,
+     3754
+    ],
+    [
+     1277,
+     3748
+    ],
+    [
+     1274,
+     3746
+    ]
+   ]
+  },
+  {
+   "from": "guild_spirit",
+   "to": "guild_fruit",
+   "weight": 4,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 31,
+   "path": [
+    [
+     1251,
+     3749
+    ],
+    [
+     1249,
+     3751
+    ]
+   ]
+  },
+  {
+   "from": "trollheim_top",
+   "to": "trollheim",
+   "weight": 67,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 4,
+   "weight_agility": 32,
+   "agility": 73,
+   "path": [
+    [
+     2890,
+     3679
+    ],
+    [
+     2885,
+     3681
+    ],
+    [
+     2882,
+     3675
+    ],
+    [
+     2885,
+     3669
+    ],
+    [
+     2887,
+     3660
+    ],
+    [
+     2880,
+     3662
+    ],
+    [
+     2874,
+     3669
+    ],
+    [
+     2872,
+     3676
+    ],
+    [
+     2870,
+     3684
+    ],
+    [
+     2866,
+     3680
+    ],
+    [
+     2865,
+     3672
+    ],
+    [
+     2863,
+     3664
+    ],
+    [
+     2855,
+     3666
+    ],
+    [
+     2848,
+     3674
+    ],
+    [
+     2854,
+     3682
+    ],
+    [
+     2858,
+     3690
+    ],
+    [
+     2851,
+     3694
+    ],
+    [
+     2843,
+     3691
+    ],
+    [
+     2835,
+     10086
+    ],
+    [
+     2835,
+     10078
+    ],
+    [
+     2836,
+     10070
+    ],
+    [
+     2839,
+     10062
+    ],
+    [
+     2837,
+     10057
+    ],
+    [
+     2829,
+     10064
+    ],
+    [
+     2830,
+     10072
+    ],
+    [
+     2828,
+     3678
+    ],
+    [
+     2822,
+     3686
+    ],
+    [
+     2823,
+     3688
+    ]
+   ]
+  },
+  {
+   "from": "civitas_square",
+   "to": "civitas",
+   "weight": 34,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 18,
+   "path": [
+    [
+     1681,
+     3135
+    ],
+    [
+     1680,
+     3127
+    ],
+    [
+     1677,
+     3122
+    ],
+    [
+     1669,
+     3114
+    ],
+    [
+     1661,
+     3109
+    ],
+    [
+     1653,
+     3108
+    ],
+    [
+     1645,
+     3108
+    ],
+    [
+     1637,
+     3106
+    ],
+    [
+     1629,
+     3106
+    ],
+    [
+     1621,
+     3106
+    ],
+    [
+     1613,
+     3105
+    ],
+    [
+     1605,
+     3103
+    ],
+    [
+     1597,
+     3106
+    ],
+    [
+     1594,
+     3106
+    ]
+   ]
+  },
+  {
+   "from": "ardougne_docks",
+   "to": "brimhaven_port",
+   "weight": 60,
+   "mode": "boat",
+   "method": "Charter boat to Brimhaven (30 coins)",
+   "transport": "boat",
+   "requires": [],
+   "bidirectional": true
+  },
+  {
+   "from": "lumbridge_castle",
+   "to": "zanaris",
+   "weight": 50,
+   "mode": "walk",
+   "method": "Zanaris through the Lumbridge shed",
+   "transport": null,
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true,
+   "estimated": true,
+   "path": [
+    [
+     3221,
+     3218
+    ],
+    [
+     3229,
+     3218
+    ],
+    [
+     3231,
+     3224
+    ],
+    [
+     3227,
+     3231
+    ],
+    [
+     3222,
+     3239
+    ],
+    [
+     3228,
+     3246
+    ],
+    [
+     3231,
+     3254
+    ],
+    [
+     3229,
+     3261
+    ],
+    [
+     3237,
+     3261
+    ],
+    [
+     3240,
+     3266
+    ],
+    [
+     3240,
+     3274
+    ],
+    [
+     3237,
+     3282
+    ],
+    [
+     3238,
+     3290
+    ],
+    [
+     3238,
+     3298
+    ],
+    [
+     3234,
+     3306
+    ],
+    [
+     3227,
+     3311
+    ],
+    [
+     3220,
+     3319
+    ],
+    [
+     3216,
+     3326
+    ],
+    [
+     3210,
+     3334
+    ],
+    [
+     3205,
+     3342
+    ],
+    [
+     3198,
+     3350
+    ],
+    [
+     3199,
+     3358
+    ],
+    [
+     3193,
+     3363
+    ],
+    [
+     3187,
+     3371
+    ],
+    [
+     3183,
+     3379
+    ],
+    [
+     3175,
+     3387
+    ],
+    [
+     3167,
+     3395
+    ],
+    [
+     3165,
+     3403
+    ],
+    [
+     3159,
+     3408
+    ],
+    [
+     3155,
+     3416
+    ],
+    [
+     3149,
+     3424
+    ],
+    [
+     3142,
+     3432
+    ],
+    [
+     3142,
+     3440
+    ],
+    [
+     3134,
+     3448
+    ],
+    [
+     3130,
+     3456
+    ],
+    [
+     3134,
+     3464
+    ],
+    [
+     3134,
+     3472
+    ],
+    [
+     3135,
+     3480
+    ],
+    [
+     3131,
+     3488
+    ],
+    [
+     3130,
+     3496
+    ],
+    [
+     3131,
+     3504
+    ],
+    [
+     3133,
+     3512
+    ],
+    [
+     3136,
+     3520
+    ],
+    [
+     3129,
+     3530
+    ],
+    [
+     3124,
+     3538
+    ],
+    [
+     3119,
+     3546
+    ],
+    [
+     3113,
+     3554
+    ],
+    [
+     3035,
+     4852
+    ],
+    [
+     3027,
+     4851
+    ],
+    [
+     3020,
+     4844
+    ],
+    [
+     3015,
+     4836
+    ],
+    [
+     3013,
+     4828
+    ],
+    [
+     3017,
+     4820
+    ],
+    [
+     3024,
+     4812
+    ],
+    [
+     3038,
+     4844
+    ],
+    [
+     3031,
+     4841
+    ],
+    [
+     2142,
+     4837
+    ],
+    [
+     2142,
+     4845
+    ],
+    [
+     2142,
+     4853
+    ],
+    [
+     2404,
+     4388
+    ],
+    [
+     2398,
+     4393
+    ],
+    [
+     2390,
+     4396
+    ],
+    [
+     2382,
+     4400
+    ],
+    [
+     2377,
+     4407
+    ],
+    [
+     2383,
+     4410
+    ],
+    [
+     2391,
+     4406
+    ],
+    [
+     2399,
+     4407
+    ],
+    [
+     2407,
+     4405
+    ],
+    [
+     2415,
+     4409
+    ],
+    [
+     2419,
+     4417
+    ],
+    [
+     2418,
+     4425
+    ],
+    [
+     2417,
+     4426
+    ]
+   ]
+  },
+  {
+   "from": "bkp_ring",
+   "to": "djp_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "bkp_ring",
+   "to": "ciq_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "bkp_ring",
+   "to": "cir_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "bkp_ring",
+   "to": "cjr_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "bkp_ring",
+   "to": "cks_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "bkp_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "djp_ring",
+   "to": "ciq_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "djp_ring",
+   "to": "cir_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "djp_ring",
+   "to": "cjr_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "djp_ring",
+   "to": "cks_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "djp_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ciq_ring",
+   "to": "cir_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ciq_ring",
+   "to": "cjr_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ciq_ring",
+   "to": "cks_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ciq_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "cir_ring",
+   "to": "cjr_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "cir_ring",
+   "to": "cks_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "cir_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "cjr_ring",
+   "to": "cks_ring",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "cjr_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "cks_ring",
+   "to": "zanaris",
+   "weight": 10,
+   "mode": "fairy",
+   "method": "Fairy ring hop",
+   "transport": "fairy",
+   "requires": [
+    "fairy_access"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "lumbridge_castle",
+   "to": "draynor",
+   "weight": 42,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 147,
+   "path": [
+    [
+     3221,
+     3218
+    ],
+    [
+     3213,
+     3216
+    ],
+    [
+     3212,
+     3209
+    ],
+    [
+     3205,
+     3214
+    ],
+    [
+     3200,
+     3218
+    ],
+    [
+     3192,
+     3216
+    ],
+    [
+     3184,
+     3219
+    ],
+    [
+     3176,
+     3226
+    ],
+    [
+     3168,
+     3225
+    ],
+    [
+     3160,
+     3222
+    ],
+    [
+     3152,
+     3222
+    ],
+    [
+     3144,
+     3224
+    ],
+    [
+     3136,
+     3219
+    ],
+    [
+     3128,
+     3219
+    ],
+    [
+     3120,
+     3227
+    ],
+    [
+     3112,
+     3229
+    ],
+    [
+     3104,
+     3234
+    ],
+    [
+     3101,
+     3236
+    ]
+   ]
+  },
+  {
+   "from": "draynor",
+   "to": "varrock_square",
+   "weight": 90,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 297,
+   "path": [
+    [
+     3093,
+     3244
+    ],
+    [
+     3087,
+     3249
+    ],
+    [
+     3081,
+     3254
+    ],
+    [
+     3081,
+     3262
+    ],
+    [
+     3081,
+     3270
+    ],
+    [
+     3085,
+     3278
+    ],
+    [
+     3090,
+     3286
+    ],
+    [
+     3087,
+     3294
+    ],
+    [
+     3088,
+     3302
+    ],
+    [
+     3091,
+     3310
+    ],
+    [
+     3090,
+     3318
+    ],
+    [
+     3084,
+     3326
+    ],
+    [
+     3078,
+     3334
+    ],
+    [
+     3070,
+     3342
+    ],
+    [
+     3062,
+     3350
+    ],
+    [
+     3060,
+     3358
+    ],
+    [
+     3065,
+     3366
+    ],
+    [
+     3066,
+     3374
+    ],
+    [
+     3073,
+     3382
+    ],
+    [
+     3080,
+     3390
+    ],
+    [
+     3086,
+     3397
+    ],
+    [
+     3091,
+     3405
+    ],
+    [
+     3093,
+     3413
+    ],
+    [
+     3100,
+     3420
+    ],
+    [
+     3108,
+     3420
+    ],
+    [
+     3116,
+     3419
+    ],
+    [
+     3124,
+     3414
+    ],
+    [
+     3132,
+     3416
+    ],
+    [
+     3140,
+     3416
+    ],
+    [
+     3148,
+     3414
+    ],
+    [
+     3156,
+     3421
+    ],
+    [
+     3164,
+     3424
+    ],
+    [
+     3172,
+     3425
+    ],
+    [
+     3180,
+     3424
+    ],
+    [
+     3188,
+     3428
+    ],
+    [
+     3196,
+     3427
+    ],
+    [
+     3204,
+     3428
+    ],
+    [
+     3205,
+     3428
+    ]
+   ]
+  },
+  {
+   "from": "falador_centre",
+   "to": "crafting_guild",
+   "weight": 45,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 148,
+   "weight_agility": 27,
+   "agility": 26,
+   "path": [
+    [
+     2964,
+     3378
+    ],
+    [
+     2966,
+     3370
+    ],
+    [
+     2974,
+     3366
+    ],
+    [
+     2982,
+     3362
+    ],
+    [
+     2990,
+     3360
+    ],
+    [
+     2998,
+     3356
+    ],
+    [
+     3006,
+     3349
+    ],
+    [
+     3006,
+     3341
+    ],
+    [
+     3006,
+     3333
+    ],
+    [
+     3005,
+     3325
+    ],
+    [
+     3001,
+     3318
+    ],
+    [
+     2993,
+     3312
+    ],
+    [
+     2985,
+     3304
+    ],
+    [
+     2977,
+     3303
+    ],
+    [
+     2969,
+     3298
+    ],
+    [
+     2961,
+     3292
+    ],
+    [
+     2953,
+     3287
+    ],
+    [
+     2945,
+     3291
+    ],
+    [
+     2941,
+     3292
+    ]
+   ]
+  },
+  {
+   "from": "elkoy_in",
+   "to": "elkoy_out",
+   "weight": 8,
+   "mode": "shortcut",
+   "method": "Follow Elkoy through the maze",
+   "transport": "shortcut",
+   "requires": [
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "elkoy_out",
+   "to": "tgv",
+   "weight": 6,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 9,
+   "path": [
+    [
+     2504,
+     3191
+    ],
+    [
+     2498,
+     3188
+    ]
+   ]
+  },
+  {
+   "from": "elkoy_in",
+   "to": "village_spirit",
+   "weight": 10,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "tiles": 23,
+   "path": [
+    [
+     2515,
+     3159
+    ],
+    [
+     2521,
+     3163
+    ],
+    [
+     2529,
+     3162
+    ],
+    [
+     2535,
+     3165
+    ]
+   ]
+  },
+  {
+   "from": "ge_spirit",
+   "to": "prif_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_ge",
+    "spirit_prif",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ge_spirit",
+   "to": "khazard_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_ge",
+    "spirit_khazard",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ge_spirit",
+   "to": "stronghold_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_ge",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ge_spirit",
+   "to": "village_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_ge",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "ge_spirit",
+   "to": "guild_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_ge",
+    "spirit_guild",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "ge_spirit",
+   "to": "hosidius_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_ge",
+    "spirit_hos",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "ge_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_ge",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "ge_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_ge",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "ge_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_ge",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "prif_spirit",
+   "to": "khazard_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_khazard",
+    "spirit_prif",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "prif_spirit",
+   "to": "stronghold_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_prif",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "prif_spirit",
+   "to": "village_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_prif",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "prif_spirit",
+   "to": "guild_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_guild",
+    "spirit_prif",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "prif_spirit",
+   "to": "hosidius_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_hos",
+    "spirit_prif",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "prif_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_brim",
+    "spirit_prif",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "prif_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_prif",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "prif_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "sote",
+    "spirit_etc",
+    "spirit_prif",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "stronghold_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_khazard",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "village_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_khazard",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "guild_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_guild",
+    "spirit_khazard",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "hosidius_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_hos",
+    "spirit_khazard",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_khazard",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_khazard",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "khazard_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_khazard",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "village_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_stronghold",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "guild_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_guild",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "hosidius_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_hos",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_sarim",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "stronghold_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_stronghold",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "village_spirit",
+   "to": "guild_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_guild",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "village_spirit",
+   "to": "hosidius_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_hos",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "village_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "village_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_sarim",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "village_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_village",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "guild_spirit",
+   "to": "hosidius_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_guild",
+    "spirit_hos",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "guild_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_guild",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "guild_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_guild",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "guild_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_guild",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 85
+  },
+  {
+   "from": "hosidius_spirit",
+   "to": "brimhaven_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_hos",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "hosidius_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_hos",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "hosidius_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_hos",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "brimhaven_spirit",
+   "to": "sarim_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "brimhaven_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_brim",
+    "spirit_etc",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "sarim_spirit",
+   "to": "etceteria_spirit",
+   "weight": 12,
+   "mode": "spirit",
+   "method": "Spirit tree hop",
+   "transport": "spirit",
+   "requires": [
+    "spirit_etc",
+    "spirit_sarim",
+    "tgv"
+   ],
+   "bidirectional": true,
+   "farm": 83
+  },
+  {
+   "from": "sarim_spirit",
+   "to": "falador_farm",
+   "weight": 17,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     3058,
+     3257
+    ],
+    [
+     3059,
+     3264
+    ],
+    [
+     3057,
+     3272
+    ],
+    [
+     3051,
+     3280
+    ],
+    [
+     3048,
+     3288
+    ],
+    [
+     3049,
+     3296
+    ],
+    [
+     3050,
+     3303
+    ]
+   ]
+  },
+  {
+   "from": "sarim_spirit",
+   "to": "draynor",
+   "weight": 19,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight_agility": 11,
+   "agility": 42,
+   "path": [
+    [
+     3058,
+     3257
+    ],
+    [
+     3059,
+     3264
+    ],
+    [
+     3062,
+     3272
+    ],
+    [
+     3070,
+     3276
+    ],
+    [
+     3074,
+     3269
+    ],
+    [
+     3079,
+     3263
+    ],
+    [
+     3081,
+     3255
+    ],
+    [
+     3085,
+     3252
+    ]
+   ]
+  },
+  {
+   "from": "*",
+   "to": "ardy_cloak_farm",
+   "weight": 5,
+   "mode": "teleport",
+   "method": "Ardougne cloak \u2192 Ardougne farm",
+   "transport": "ardy_cloak",
+   "requires": [
+    "ardy_med"
+   ]
+  },
+  {
+   "from": "ardy_cloak_farm",
+   "to": "ardougne_farm",
+   "weight": 4,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     2665,
+     3374
+    ]
+   ]
+  },
+  {
+   "from": "*",
+   "to": "mushtree_hill",
+   "weight": 6,
+   "mode": "teleport",
+   "method": "Digsite pendant \u2192 Fossil Island",
+   "transport": "digsite",
+   "requires": [
+    "bone_voyage"
+   ]
+  },
+  {
+   "from": "mushtree_hill",
+   "to": "mushtree_meadow",
+   "weight": 10,
+   "mode": "mushtree",
+   "method": "Magic mushtree",
+   "transport": "mushtree",
+   "requires": [
+    "bone_voyage",
+    "mush_hill",
+    "mush_meadow"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "mushtree_hill",
+   "to": "mushtree_verdant",
+   "weight": 10,
+   "mode": "mushtree",
+   "method": "Magic mushtree",
+   "transport": "mushtree",
+   "requires": [
+    "bone_voyage",
+    "mush_hill",
+    "mush_verdant"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "mushtree_hill",
+   "to": "mushtree_swamp",
+   "weight": 10,
+   "mode": "mushtree",
+   "method": "Magic mushtree",
+   "transport": "mushtree",
+   "requires": [
+    "bone_voyage",
+    "mush_hill",
+    "mush_swamp"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "mushtree_meadow",
+   "to": "mushtree_verdant",
+   "weight": 10,
+   "mode": "mushtree",
+   "method": "Magic mushtree",
+   "transport": "mushtree",
+   "requires": [
+    "bone_voyage",
+    "mush_meadow",
+    "mush_verdant"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "mushtree_meadow",
+   "to": "mushtree_swamp",
+   "weight": 10,
+   "mode": "mushtree",
+   "method": "Magic mushtree",
+   "transport": "mushtree",
+   "requires": [
+    "bone_voyage",
+    "mush_meadow",
+    "mush_swamp"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "mushtree_verdant",
+   "to": "mushtree_swamp",
+   "weight": 10,
+   "mode": "mushtree",
+   "method": "Magic mushtree",
+   "transport": "mushtree",
+   "requires": [
+    "bone_voyage",
+    "mush_swamp",
+    "mush_verdant"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "mushtree_meadow",
+   "to": "hardwood",
+   "weight": 16,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     3676,
+     3871
+    ],
+    [
+     3684,
+     3863
+    ],
+    [
+     3692,
+     3861
+    ],
+    [
+     3694,
+     3854
+    ],
+    [
+     3697,
+     3846
+    ],
+    [
+     3705,
+     3842
+    ],
+    [
+     3706,
+     3841
+    ]
+   ]
+  },
+  {
+   "from": "mushtree_verdant",
+   "to": "hardwood",
+   "weight": 69,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     3757,
+     3756
+    ],
+    [
+     3762,
+     3760
+    ],
+    [
+     3769,
+     3761
+    ],
+    [
+     3777,
+     3767
+    ],
+    [
+     3782,
+     3765
+    ],
+    [
+     3780,
+     3758
+    ],
+    [
+     3784,
+     3750
+    ],
+    [
+     3780,
+     3742
+    ],
+    [
+     3772,
+     3743
+    ],
+    [
+     3764,
+     3742
+    ],
+    [
+     3756,
+     3740
+    ],
+    [
+     3748,
+     3740
+    ],
+    [
+     3740,
+     3740
+    ],
+    [
+     3732,
+     3741
+    ],
+    [
+     3724,
+     3749
+    ],
+    [
+     3724,
+     3757
+    ],
+    [
+     3727,
+     3763
+    ],
+    [
+     3729,
+     3771
+    ],
+    [
+     3732,
+     3779
+    ],
+    [
+     3733,
+     3787
+    ],
+    [
+     3729,
+     3795
+    ],
+    [
+     3732,
+     3803
+    ],
+    [
+     3733,
+     3811
+    ],
+    [
+     3735,
+     3819
+    ],
+    [
+     3736,
+     3827
+    ],
+    [
+     3736,
+     3835
+    ],
+    [
+     3728,
+     3838
+    ],
+    [
+     3720,
+     3838
+    ],
+    [
+     3716,
+     3839
+    ]
+   ]
+  },
+  {
+   "from": "*",
+   "to": "quetzal_auburnvale",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Quetzal whistle \u2192 Auburnvale",
+   "transport": "quetzal",
+   "requires": [
+    "q_auburnvale",
+    "twilight"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "quetzal_kastori",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Quetzal whistle \u2192 Kastori",
+   "transport": "quetzal",
+   "requires": [
+    "q_kastori",
+    "twilight"
+   ]
+  },
+  {
+   "from": "catherby_bank",
+   "to": "catherby_fruit",
+   "weight": 21,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     2801,
+     3449
+    ],
+    [
+     2809,
+     3446
+    ],
+    [
+     2817,
+     3448
+    ],
+    [
+     2825,
+     3446
+    ],
+    [
+     2828,
+     3440
+    ],
+    [
+     2836,
+     3435
+    ],
+    [
+     2844,
+     3438
+    ],
+    [
+     2852,
+     3436
+    ],
+    [
+     2853,
+     3436
+    ]
+   ]
+  },
+  {
+   "from": "guild_tree",
+   "to": "guild_fruit",
+   "weight": 15,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     1230,
+     3736
+    ],
+    [
+     1236,
+     3730
+    ],
+    [
+     1244,
+     3729
+    ],
+    [
+     1247,
+     3736
+    ],
+    [
+     1248,
+     3744
+    ],
+    [
+     1246,
+     3751
+    ]
+   ]
+  },
+  {
+   "from": "guild_spirit",
+   "to": "guild_tree",
+   "weight": 11,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     1251,
+     3749
+    ],
+    [
+     1248,
+     3742
+    ],
+    [
+     1247,
+     3734
+    ],
+    [
+     1242,
+     3729
+    ],
+    [
+     1240,
+     3728
+    ]
+   ]
+  },
+  {
+   "from": "catherby_herb",
+   "to": "catherby_fruit",
+   "weight": 21,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     2810,
+     3465
+    ],
+    [
+     2815,
+     3460
+    ],
+    [
+     2821,
+     3454
+    ],
+    [
+     2823,
+     3446
+    ],
+    [
+     2826,
+     3442
+    ],
+    [
+     2834,
+     3436
+    ],
+    [
+     2842,
+     3438
+    ],
+    [
+     2850,
+     3437
+    ],
+    [
+     2853,
+     3436
+    ]
+   ]
+  },
+  {
+   "from": "gnome_tree",
+   "to": "gnome_fruit",
+   "weight": 16,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     2434,
+     3415
+    ],
+    [
+     2440,
+     3420
+    ],
+    [
+     2447,
+     3424
+    ],
+    [
+     2454,
+     3432
+    ],
+    [
+     2462,
+     3436
+    ],
+    [
+     2468,
+     3439
+    ]
+   ]
+  },
+  {
+   "from": "guild_herb",
+   "to": "guild_tree",
+   "weight": 12,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     1266,
+     3738
+    ],
+    [
+     1260,
+     3730
+    ],
+    [
+     1252,
+     3729
+    ],
+    [
+     1244,
+     3729
+    ],
+    [
+     1240,
+     3728
+    ]
+   ]
+  },
+  {
+   "from": "guild_herb",
+   "to": "guild_fruit",
+   "weight": 15,
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "path": [
+    [
+     1266,
+     3738
+    ],
+    [
+     1260,
+     3730
+    ],
+    [
+     1252,
+     3729
+    ],
+    [
+     1247,
+     3737
+    ],
+    [
+     1248,
+     3745
+    ],
+    [
+     1246,
+     3751
+    ]
+   ]
+  },
+  {
+   "from": "gnome_tree",
+   "to": "stronghold_spirit",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 12,
+   "path": [
+    [
+     2434,
+     3415
+    ],
+    [
+     2440,
+     3420
+    ],
+    [
+     2447,
+     3424
+    ],
+    [
+     2452,
+     3432
+    ],
+    [
+     2453,
+     3436
+    ]
+   ]
+  },
+  {
+   "from": "gnome_tree",
+   "to": "grand_tree",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 25,
+   "path": [
+    [
+     2434,
+     3415
+    ],
+    [
+     2434,
+     3423
+    ],
+    [
+     2439,
+     3431
+    ],
+    [
+     2442,
+     3439
+    ],
+    [
+     2446,
+     3447
+    ],
+    [
+     2450,
+     3455
+    ],
+    [
+     2458,
+     3463
+    ],
+    [
+     2462,
+     3471
+    ],
+    [
+     2461,
+     3479
+    ],
+    [
+     2462,
+     3487
+    ]
+   ]
+  },
+  {
+   "from": "gnome_fruit",
+   "to": "slayer_cave",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 15,
+   "path": [
+    [
+     2476,
+     3447
+    ],
+    [
+     2468,
+     3446
+    ],
+    [
+     2460,
+     3438
+    ],
+    [
+     2452,
+     3439
+    ],
+    [
+     2443,
+     3434
+    ],
+    [
+     2439,
+     3430
+    ]
+   ]
+  },
+  {
+   "from": "varrock",
+   "to": "ge_spirit",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 25,
+   "path": [
+    [
+     3227,
+     3459
+    ],
+    [
+     3220,
+     3451
+    ],
+    [
+     3212,
+     3448
+    ],
+    [
+     3204,
+     3452
+    ],
+    [
+     3197,
+     3460
+    ],
+    [
+     3194,
+     3468
+    ],
+    [
+     3192,
+     3476
+    ],
+    [
+     3191,
+     3484
+    ],
+    [
+     3187,
+     3492
+    ],
+    [
+     3179,
+     3500
+    ]
+   ]
+  },
+  {
+   "from": "catherby_fruit",
+   "to": "camelot",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 36,
+   "path": [
+    [
+     2862,
+     3433
+    ],
+    [
+     2855,
+     3425
+    ],
+    [
+     2847,
+     3430
+    ],
+    [
+     2839,
+     3434
+    ],
+    [
+     2832,
+     3437
+    ],
+    [
+     2827,
+     3444
+    ],
+    [
+     2821,
+     3446
+    ],
+    [
+     2813,
+     3446
+    ],
+    [
+     2805,
+     3446
+    ],
+    [
+     2797,
+     3449
+    ],
+    [
+     2789,
+     3455
+    ],
+    [
+     2781,
+     3463
+    ],
+    [
+     2776,
+     3471
+    ],
+    [
+     2770,
+     3476
+    ],
+    [
+     2765,
+     3474
+    ]
+   ]
+  },
+  {
+   "from": "guild_fruit",
+   "to": "cir_ring",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 34,
+   "path": [
+    [
+     1243,
+     3760
+    ],
+    [
+     1245,
+     3753
+    ],
+    [
+     1248,
+     3745
+    ],
+    [
+     1247,
+     3737
+    ],
+    [
+     1246,
+     3729
+    ],
+    [
+     1248,
+     3721
+    ],
+    [
+     1256,
+     3713
+    ],
+    [
+     1264,
+     3712
+    ],
+    [
+     1272,
+     3720
+    ],
+    [
+     1277,
+     3727
+    ],
+    [
+     1284,
+     3735
+    ],
+    [
+     1289,
+     3740
+    ],
+    [
+     1292,
+     3748
+    ],
+    [
+     1294,
+     3754
+    ]
+   ]
+  },
+  {
+   "from": "guild_herb",
+   "to": "farming_guild_gate",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 9,
+   "path": [
+    [
+     1266,
+     3738
+    ],
+    [
+     1260,
+     3730
+    ],
+    [
+     1256,
+     3727
+    ]
+   ]
+  },
+  {
+   "from": "*",
+   "to": "digsite_barge",
+   "weight": 6,
+   "mode": "teleport",
+   "method": "Digsite pendant \u2192 Digsite",
+   "transport": "digsite",
+   "requires": [
+    "bone_voyage"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "quetzal_civitas",
+   "weight": 6,
+   "mode": "teleport",
+   "method": "Quetzal whistle \u2192 Civitas illa Fortis",
+   "transport": "quetzal",
+   "requires": [
+    "q_civitas",
+    "twilight"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "memoirs_hosidius",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Kharedst's memoirs \u2192 Lunch by the Lancalliums",
+   "transport": "memoirs",
+   "requires": [
+    "client_kourend"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "memoirs_hosidius",
+   "weight": 8,
+   "mode": "teleport",
+   "method": "Book of the dead \u2192 Lunch by the Lancalliums",
+   "transport": "book_dead",
+   "requires": [
+    "kingdom_divided"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "quetzal_kastori",
+   "weight": 6,
+   "mode": "teleport",
+   "method": "Pendant of Ates \u2192 Kastori",
+   "transport": "ates",
+   "requires": [
+    "ates_statues"
+   ]
+  },
+  {
+   "from": "*",
+   "to": "nemus",
+   "weight": 6,
+   "mode": "teleport",
+   "method": "Pendant of Ates \u2192 Nemus Retreat",
+   "transport": "ates",
+   "requires": [
+    "ates_statues"
+   ]
+  },
+  {
+   "from": "digsite_barge",
+   "to": "fossil_barge",
+   "weight": 20,
+   "mode": "boat",
+   "method": "Quick-travel barge to Fossil Island",
+   "transport": null,
+   "requires": [
+    "bone_voyage"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "varrock_quetzal",
+   "to": "quetzal_civitas",
+   "weight": 25,
+   "mode": "boat",
+   "method": "Quetzal ride to Varlamore",
+   "transport": null,
+   "requires": [
+    "children_sun"
+   ],
+   "bidirectional": true
+  },
+  {
+   "from": "port_sarim",
+   "to": "port_piscarilius",
+   "weight": 35,
+   "mode": "boat",
+   "method": "Veos' boat to Port Piscarilius",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true
+  },
+  {
+   "from": "port_sarim",
+   "to": "lands_end",
+   "weight": 35,
+   "mode": "boat",
+   "method": "Veos' boat to Land's End",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true
+  },
+  {
+   "from": "fossil_barge",
+   "to": "mushtree_meadow",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 27,
+   "weight_agility": 20,
+   "agility": 70,
+   "path": [
+    [
+     3724,
+     3807
+    ],
+    [
+     3716,
+     3806
+    ],
+    [
+     3708,
+     3811
+    ],
+    [
+     3700,
+     3814
+    ],
+    [
+     3692,
+     3822
+    ],
+    [
+     3691,
+     3830
+    ],
+    [
+     3684,
+     3834
+    ],
+    [
+     3680,
+     3842
+    ],
+    [
+     3680,
+     3850
+    ],
+    [
+     3682,
+     3858
+    ],
+    [
+     3682,
+     3863
+    ]
+   ]
+  },
+  {
+   "from": "fossil_barge",
+   "to": "hardwood",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 18,
+   "weight_agility": 6,
+   "agility": 70,
+   "path": [
+    [
+     3724,
+     3807
+    ],
+    [
+     3716,
+     3806
+    ],
+    [
+     3708,
+     3811
+    ],
+    [
+     3700,
+     3814
+    ],
+    [
+     3692,
+     3822
+    ],
+    [
+     3692,
+     3830
+    ],
+    [
+     3700,
+     3829
+    ]
+   ]
+  },
+  {
+   "from": "memoirs_hosidius",
+   "to": "hosidius",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 22,
+   "path": [
+    [
+     1714,
+     3611
+    ],
+    [
+     1707,
+     3603
+    ],
+    [
+     1710,
+     3595
+    ],
+    [
+     1717,
+     3593
+    ],
+    [
+     1725,
+     3591
+    ],
+    [
+     1724,
+     3583
+    ],
+    [
+     1728,
+     3575
+    ],
+    [
+     1726,
+     3567
+    ],
+    [
+     1727,
+     3563
+    ]
+   ]
+  },
+  {
+   "from": "quetzal_civitas",
+   "to": "civitas",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 38,
+   "path": [
+    [
+     1697,
+     3140
+    ],
+    [
+     1689,
+     3138
+    ],
+    [
+     1681,
+     3132
+    ],
+    [
+     1680,
+     3124
+    ],
+    [
+     1674,
+     3119
+    ],
+    [
+     1666,
+     3111
+    ],
+    [
+     1658,
+     3109
+    ],
+    [
+     1650,
+     3108
+    ],
+    [
+     1642,
+     3108
+    ],
+    [
+     1634,
+     3106
+    ],
+    [
+     1626,
+     3106
+    ],
+    [
+     1618,
+     3106
+    ],
+    [
+     1610,
+     3105
+    ],
+    [
+     1602,
+     3103
+    ],
+    [
+     1594,
+     3106
+    ]
+   ]
+  },
+  {
+   "from": "quetzal_kastori",
+   "to": "kastori",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 12,
+   "path": [
+    [
+     1344,
+     3022
+    ],
+    [
+     1343,
+     3030
+    ],
+    [
+     1341,
+     3038
+    ],
+    [
+     1343,
+     3046
+    ],
+    [
+     1343,
+     3049
+    ]
+   ]
+  },
+  {
+   "from": "quetzal_auburnvale",
+   "to": "nemus",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 24,
+   "path": [
+    [
+     1411,
+     3361
+    ],
+    [
+     1403,
+     3356
+    ],
+    [
+     1401,
+     3348
+    ],
+    [
+     1393,
+     3343
+    ],
+    [
+     1385,
+     3344
+    ],
+    [
+     1377,
+     3344
+    ],
+    [
+     1369,
+     3343
+    ],
+    [
+     1361,
+     3337
+    ],
+    [
+     1358,
+     3330
+    ],
+    [
+     1358,
+     3329
+    ]
+   ]
+  },
+  {
+   "from": "port_sarim",
+   "to": "falador_farm",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 20,
+   "path": [
+    [
+     3055,
+     3245
+    ],
+    [
+     3053,
+     3253
+    ],
+    [
+     3054,
+     3261
+    ],
+    [
+     3052,
+     3268
+    ],
+    [
+     3050,
+     3276
+    ],
+    [
+     3052,
+     3284
+    ],
+    [
+     3045,
+     3292
+    ],
+    [
+     3052,
+     3300
+    ]
+   ]
+  },
+  {
+   "from": "port_sarim",
+   "to": "sarim_spirit",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 5,
+   "path": [
+    [
+     3055,
+     3245
+    ],
+    [
+     3053,
+     3249
+    ]
+   ]
+  },
+  {
+   "from": "port_piscarilius",
+   "to": "hosidius",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 56,
+   "path": [
+    [
+     1824,
+     3691
+    ],
+    [
+     1817,
+     3689
+    ],
+    [
+     1809,
+     3688
+    ],
+    [
+     1801,
+     3688
+    ],
+    [
+     1793,
+     3688
+    ],
+    [
+     1785,
+     3685
+    ],
+    [
+     1779,
+     3677
+    ],
+    [
+     1771,
+     3674
+    ],
+    [
+     1768,
+     3666
+    ],
+    [
+     1768,
+     3658
+    ],
+    [
+     1768,
+     3650
+    ],
+    [
+     1767,
+     3642
+    ],
+    [
+     1761,
+     3636
+    ],
+    [
+     1759,
+     3628
+    ],
+    [
+     1758,
+     3620
+    ],
+    [
+     1755,
+     3612
+    ],
+    [
+     1754,
+     3604
+    ],
+    [
+     1754,
+     3596
+    ],
+    [
+     1754,
+     3588
+    ],
+    [
+     1754,
+     3580
+    ],
+    [
+     1754,
+     3572
+    ],
+    [
+     1748,
+     3568
+    ],
+    [
+     1743,
+     3563
+    ]
+   ]
+  },
+  {
+   "from": "lands_end",
+   "to": "hosidius",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 93,
+   "weight_agility": 80,
+   "agility": 45,
+   "path": [
+    [
+     1504,
+     3399
+    ],
+    [
+     1503,
+     3407
+    ],
+    [
+     1510,
+     3411
+    ],
+    [
+     1518,
+     3412
+    ],
+    [
+     1523,
+     3420
+    ],
+    [
+     1530,
+     3424
+    ],
+    [
+     1538,
+     3421
+    ],
+    [
+     1546,
+     3423
+    ],
+    [
+     1554,
+     3424
+    ],
+    [
+     1562,
+     3432
+    ],
+    [
+     1570,
+     3436
+    ],
+    [
+     1578,
+     3441
+    ],
+    [
+     1586,
+     3446
+    ],
+    [
+     1594,
+     3447
+    ],
+    [
+     1602,
+     3452
+    ],
+    [
+     1610,
+     3453
+    ],
+    [
+     1618,
+     3458
+    ],
+    [
+     1626,
+     3466
+    ],
+    [
+     1634,
+     3469
+    ],
+    [
+     1642,
+     3477
+    ],
+    [
+     1650,
+     3485
+    ],
+    [
+     1657,
+     3490
+    ],
+    [
+     1662,
+     3494
+    ],
+    [
+     1669,
+     3498
+    ],
+    [
+     1677,
+     3503
+    ],
+    [
+     1685,
+     3505
+    ],
+    [
+     1693,
+     3504
+    ],
+    [
+     1701,
+     3502
+    ],
+    [
+     1709,
+     3506
+    ],
+    [
+     1717,
+     3512
+    ],
+    [
+     1720,
+     3508
+    ],
+    [
+     1724,
+     3501
+    ],
+    [
+     1728,
+     3507
+    ],
+    [
+     1735,
+     3514
+    ],
+    [
+     1736,
+     3522
+    ],
+    [
+     1731,
+     3530
+    ],
+    [
+     1724,
+     3538
+    ],
+    [
+     1726,
+     3546
+    ],
+    [
+     1727,
+     3547
+    ]
+   ]
+  },
+  {
+   "from": "varrock_quetzal",
+   "to": "varrock",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 23,
+   "path": [
+    [
+     3280,
+     3412
+    ],
+    [
+     3279,
+     3419
+    ],
+    [
+     3274,
+     3426
+    ],
+    [
+     3266,
+     3430
+    ],
+    [
+     3261,
+     3438
+    ],
+    [
+     3253,
+     3439
+    ],
+    [
+     3245,
+     3445
+    ],
+    [
+     3241,
+     3450
+    ],
+    [
+     3237,
+     3451
+    ]
+   ]
+  },
+  {
+   "from": "digsite_barge",
+   "to": "varrock",
+   "mode": "walk",
+   "method": "Walk",
+   "transport": null,
+   "requires": [],
+   "bidirectional": true,
+   "weight": 45,
+   "path": [
+    [
+     3362,
+     3445
+    ],
+    [
+     3354,
+     3443
+    ],
+    [
+     3346,
+     3443
+    ],
+    [
+     3338,
+     3443
+    ],
+    [
+     3330,
+     3443
+    ],
+    [
+     3325,
+     3437
+    ],
+    [
+     3317,
+     3429
+    ],
+    [
+     3309,
+     3426
+    ],
+    [
+     3301,
+     3423
+    ],
+    [
+     3293,
+     3426
+    ],
+    [
+     3285,
+     3421
+    ],
+    [
+     3277,
+     3426
+    ],
+    [
+     3271,
+     3434
+    ],
+    [
+     3263,
+     3436
+    ],
+    [
+     3255,
+     3439
+    ],
+    [
+     3247,
+     3443
+    ],
+    [
+     3243,
+     3450
+    ],
+    [
+     3237,
+     3451
+    ]
+   ]
+  }
+ ]
+}
